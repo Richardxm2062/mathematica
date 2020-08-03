@@ -1,0 +1,175 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5812,        167]
+NotebookOptionsPosition[      5207,        151]
+NotebookOutlinePosition[      5546,        166]
+CellTagsIndexPosition[      5503,        163]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:5168\:5fae\:5206", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Dt", "[", 
+    RowBox[{
+     RowBox[{"Sqrt", "[", 
+      RowBox[{
+       SuperscriptBox["x", "3"], "+", 
+       SuperscriptBox["y", "3"]}], "]"}], ",", "x", ",", "y"}], "]"}], 
+   ";"}]}]], "Input",
+ CellChangeTimes->{{3.796547231993054*^9, 3.7965472470680532`*^9}, {
+   3.796552349254531*^9, 3.7965523586141787`*^9}, 
+   3.796554029401141*^9},ExpressionUUID->"a256d287-ebf5-4150-a185-\
+b0baa61db16d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "(*", "\:5b9a\:4e49\:7531\:4e0d\:7b49\:5f0f\:6216\:7b49\:5f0f\:6784\:6210\
+\:7684\:533a\:57df", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"R", " ", "=", 
+     RowBox[{"ImplicitRegion", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["x", "2"], "+", 
+          SuperscriptBox["y", "2"], "+", 
+          SuperscriptBox["z", "2"]}], "\[LessEqual]", "4"}], "&&", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["x", "2"], "+", 
+          SuperscriptBox["y", "2"]}], "\[LessEqual]", 
+         RowBox[{"2", " ", "y"}]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"r", "=", 
+     RowBox[{"ImplicitRegion", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["x", "2"], "+", 
+          SuperscriptBox["y", "2"], "+", 
+          SuperscriptBox["z", "2"]}], "\[LessEqual]", "27"}], " ", "&&", " ", 
+        
+        RowBox[{"z", "\[GreaterEqual]", " ", "0"}], " ", "&&", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"6", "*", "z"}], "-", 
+          SuperscriptBox["x", "2"], "-", 
+          SuperscriptBox["y", "2"]}], "\[GreaterEqual]", "  ", "0"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}], ";"}]}]}]], \
+"Input",
+ CellChangeTimes->{{3.796551473107581*^9, 3.796551492866948*^9}, {
+  3.796552365996237*^9, 3.796552410140925*^9}, {3.796553912047492*^9, 
+  3.7965539179122562`*^9}},ExpressionUUID->"8eafaea0-59bc-460b-9f4b-\
+7331fe17a9e7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:53ef\:89c6\:5316\:4e09\:7ef4\:533a\:57df", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"RegionPlot3D", "[", 
+    RowBox[{"R", ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "500"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"RegionPlot3D", "[", 
+    RowBox[{"r", ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "500"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.796551531754794*^9, 3.796551551519821*^9}, {
+  3.796551797596703*^9, 3.796551844998324*^9}, {3.796551973983967*^9, 
+  3.7965520147924*^9}, {3.7965521793994923`*^9, 3.7965521804828053`*^9}, {
+  3.796552420712325*^9, 3.796552430772435*^9}, {3.7965539198409452`*^9, 
+  3.796553936348991*^9}},ExpressionUUID->"39f54be5-923b-4e46-83d7-\
+b9b9d4228b67"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "(*", "\:5728\:9650\:5236\:533a\:57df\:4e0a\:8fdb\:884c\:79ef\:5206", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"z", " ", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "\[Element]", " ", "r"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"1", " ", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "\[Element]", " ", "R"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}]}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.79655233329313*^9, 3.7965523335991592`*^9}, {
+  3.796552448043028*^9, 3.796552467210198*^9}, {3.796552936690412*^9, 
+  3.7965529766094437`*^9}, {3.796553056164818*^9, 3.7965530888433237`*^9}, {
+  3.796553312682664*^9, 3.7965533137543488`*^9}, {3.796553943600576*^9, 
+  3.796553970613833*^9}, {3.796554010036862*^9, 
+  3.796554025296308*^9}},ExpressionUUID->"07743c26-7a78-40f6-ad02-\
+a97667628901"]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{23, Automatic}, {-73, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (May 18, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 518, 14, 88, "Input",ExpressionUUID->"a256d287-ebf5-4150-a185-b0baa61db16d"],
+Cell[1079, 36, 1661, 47, 117, InheritFromParent,ExpressionUUID->"8eafaea0-59bc-460b-9f4b-7331fe17a9e7"],
+Cell[2743, 85, 762, 16, 112, InheritFromParent,ExpressionUUID->"39f54be5-923b-4e46-83d7-b9b9d4228b67"],
+Cell[3508, 103, 1695, 46, 138, InheritFromParent,ExpressionUUID->"07743c26-7a78-40f6-ad02-a97667628901"]
+}
+]
+*)
+
